@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="usernameText" type="id"/>
+    <item name="asd" type="id"/>
+    <item name="list" type="id"/>
+    <item name="newUsername" type="id"/>
+    <item name="newPassword" type="id"/>
+
+
+</resources>
