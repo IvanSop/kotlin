@@ -49,4 +49,5 @@ dependencies {
    // compile 'org.jetbrains.anko:anko-sdk23:0.9' // sdk19, sdk21, sdk23 are also available
     compile 'org.jetbrains.anko:anko-support-v4:0.9' // In case you need support-v4 bindings
     compile 'org.jetbrains.anko:anko-appcompat-v7:0.9' // For appcompat-v7 bindings
+    compile 'org.jetbrains.anko:anko-sqlite:0.8.3'
 }

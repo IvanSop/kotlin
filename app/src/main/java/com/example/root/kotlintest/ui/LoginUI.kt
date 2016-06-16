@@ -13,17 +13,23 @@ class LoginUI: AnkoComponent<LoginActivity> {
         verticalLayout {
             setPadding(dip(50), dip(200), dip(50), dip(200))
             val username = editText {
+                inputType = InputType.TYPE_CLASS_TEXT
                 hint = "Username"
 
             }
             val password = editText {
                 inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
                 hint = "Password"
+
             }
             button("Login") {
                 onClick {
-                    if ((username.text.toString()).equals("A") && (password.text.toString()).equals("a")) {
+                    if ((username.text.toString()).equals("a") && (password.text.toString()).equals("a")) {
                         toast("Success!")
+
+                        val prefs = ui.owner.defaultSharedPreferences
+                        prefs.edit().putString("username", username.text.toString()).apply()
+
                         startActivity<NavigationActivity>("uname" to password.text.toString())
                     } else {
                         longToast("Failure! ${username.text} - ${password.text}")
